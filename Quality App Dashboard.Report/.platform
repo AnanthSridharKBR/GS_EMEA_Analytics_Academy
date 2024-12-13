@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Quality App Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d86ed770-a5e9-4bd5-928d-b2c9340abc95"
+  }
+}

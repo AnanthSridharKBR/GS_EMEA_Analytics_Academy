@@ -1,0 +1,4307 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"tp_audit\",\"crb09_auditrecommendations\",\"tp_auditfindings\",\"tp_auditsubtasks\",\"crb09_observations\",\"crb09_gsippprojectlist\",\"Audit Process\",\"Complaints\",\"Compliments\",\"NCR Process\",\"OBS Process\",\"Measures Table\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.138.782.0 (24.11)"
+      }
+    ],
+    "culture": "en-GB",
+    "cultures": [
+      {
+        "name": "en-GB",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "83e6176d-48f5-4a88-8270-d3e556b9302f",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Parent Audit",
+        "fromTable": "tp_auditfindings",
+        "toColumn": "Audit Number",
+        "toTable": "tp_audit"
+      },
+      {
+        "name": "c60bf2c5-1ca8-415e-88d8-5344c455b709",
+        "fromColumn": "crb09_parentrecommendation",
+        "fromTable": "tp_auditsubtasks",
+        "toColumn": "Number",
+        "toTable": "crb09_auditrecommendations"
+      },
+      {
+        "name": "8bb7309c-f496-442b-897d-ab690333e20d",
+        "fromColumn": "crb09_parentobservation",
+        "fromTable": "tp_auditsubtasks",
+        "isActive": false,
+        "toColumn": "Number",
+        "toTable": "crb09_observations"
+      },
+      {
+        "name": "daf1579a-943b-41dd-8745-8290d5ef87e6",
+        "fromColumn": "tp_parentauditfinding",
+        "fromTable": "tp_auditsubtasks",
+        "isActive": false,
+        "toColumn": "Number",
+        "toTable": "tp_auditfindings"
+      },
+      {
+        "name": "d7a099e8-b1bc-4213-b312-2ceb3570a131",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Planned Start Date",
+        "fromTable": "tp_audit",
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "89514288-dc6b-4d14-a42b-c5724ecb4a95",
+        "fromColumn": "Planned End Date",
+        "fromTable": "tp_audit",
+        "isActive": false,
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "5e366693-00ff-4770-bbab-d800fa4c0d7c",
+        "fromColumn": "Report Issued Date",
+        "fromTable": "tp_audit",
+        "isActive": false,
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "40004e15-b0fd-4734-826d-c4c6830237ae",
+        "fromColumn": "Closed Date",
+        "fromTable": "tp_audit",
+        "isActive": false,
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "5e5d5aa9-116d-4c78-9621-250d15dac424",
+        "fromColumn": "Actual Start Date",
+        "fromTable": "tp_audit",
+        "isActive": false,
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "bc15e0c0-ae8d-4ea8-8703-17e5a6c8d087",
+        "fromColumn": "Actual End Date",
+        "fromTable": "tp_audit",
+        "isActive": false,
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "582f6676-635b-6000-6700-b2d22d083763",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Parent Audit",
+        "fromTable": "crb09_observations",
+        "toColumn": "Audit Number",
+        "toTable": "tp_audit"
+      },
+      {
+        "name": "6ab426fa-512d-4a44-84eb-49ceb798c3bd",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Parent Audit",
+        "fromTable": "crb09_auditrecommendations",
+        "toColumn": "Audit Number",
+        "toTable": "tp_audit"
+      },
+      {
+        "name": "5e9671a7-4782-4fa1-9280-14b1f3626a8b",
+        "fromColumn": "crb09_gsippprojectlist.crb09_costpointid",
+        "fromTable": "tp_audit",
+        "toColumn": "CostpointID",
+        "toTable": "crb09_gsippprojectlist"
+      },
+      {
+        "name": "4b2e953c-09fa-455c-bbfd-8672a663ec47",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Raised_Date",
+        "fromTable": "tp_auditfindings",
+        "toColumn": "Date",
+        "toTable": "Reporting Calendar for NCR"
+      },
+      {
+        "name": "cbe118ff-cfae-4bda-a282-5f37e648e701",
+        "fromColumn": "Closed Date",
+        "fromTable": "tp_auditfindings",
+        "isActive": false,
+        "toColumn": "Date",
+        "toTable": "Reporting Calendar for NCR"
+      },
+      {
+        "name": "6fcfedfe-1115-4e15-824b-e07bcd189d83",
+        "fromColumn": "Due_Date",
+        "fromTable": "tp_auditfindings",
+        "isActive": false,
+        "toColumn": "Date",
+        "toTable": "Reporting Calendar for NCR"
+      },
+      {
+        "name": "3b142ebd-0411-478a-8c81-6e86318f6cef",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Received Date",
+        "fromTable": "Compliments",
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "bb73a8df-204c-44ac-9d16-fdb25f2f26e1",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Received Date",
+        "fromTable": "Complaints",
+        "toColumn": "CalendarDate",
+        "toTable": "Reporting Calendar"
+      },
+      {
+        "name": "ef60dfb9-d675-41bd-80e3-fd5d185951cd",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Audit Process",
+        "fromTable": "tp_auditfindings",
+        "toCardinality": "many",
+        "toColumn": "Audit Process Group",
+        "toTable": "NCR Process"
+      },
+      {
+        "name": "3f80c831-5670-40d3-a444-fb5c7d464f86",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Audit Process",
+        "fromTable": "crb09_observations",
+        "toCardinality": "many",
+        "toColumn": "Audit Process Group",
+        "toTable": "OBS Process"
+      },
+      {
+        "name": "2ed6a572-d5a8-c3aa-f95a-5ac5176fce28",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Audit Process",
+        "fromTable": "tp_audit",
+        "toCardinality": "many",
+        "toColumn": "Audit Process Group",
+        "toTable": "Audit Process"
+      }
+    ],
+    "sourceQueryCulture": "en-GB",
+    "tables": [
+      {
+        "name": "tp_audit",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Audit ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0256af87-5602-49e6-80ab-d617afa315f2",
+            "sourceColumn": "tp_auditid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ownerid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5eaae764-af07-4c6f-a896-2952f012c456",
+            "sourceColumn": "ownerid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c218bdd8-22b0-43cd-b163-55dc7f6b14ad",
+            "sourceColumn": "owneridname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ccb016a6-2f74-4803-8605-fe01f186a9ae",
+            "sourceColumn": "tp_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Planned Start Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "971af4ed-9b06-4d04-9d4c-6fabb9fa3c8a",
+            "sourceColumn": "tp_plannedstartdate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Planned End Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "8e28e930-aafd-4857-97af-8d12978b85cf",
+            "sourceColumn": "tp_plannedenddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Actual Start Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "113c36c8-04b5-4446-88f6-a7ac3ca22ed0",
+            "sourceColumn": "tp_actualstartdate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Actual End Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "0ae997a6-e862-4a32-8c9d-4d20f7c3e967",
+            "sourceColumn": "tp_actualenddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tp_owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ac742939-c0f7-4898-91f6-a8724a3c2ebd",
+            "sourceColumn": "tp_owner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Scope",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3d17c655-4f22-4b82-bda5-e75e9ac02dbe",
+            "sourceColumn": "tp_auditscope",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6a6e3212-0982-47b1-81f5-2270627fb890",
+            "sourceColumn": "tp_audittypename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2b6c94fd-851e-4de6-99be-c3b3e2b9c518",
+            "sourceColumn": "tp_statusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Markets",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1245ade5-d45e-4f1a-bcb7-fe91b7b39d9c",
+            "sourceColumn": "tp_marketsname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Location",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d9efd50b-e248-4f76-a728-fcfab06cdad8",
+            "sourceColumn": "tp_location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Executive Summary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e49e9d04-0db1-43ea-a69a-381f4f5551aa",
+            "sourceColumn": "tp_executivesummary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Evidence Observed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "23117bf9-e1e7-482c-a729-d13bd93052f1",
+            "sourceColumn": "tp_evidenceobserved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ISO Standard",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a53c98cf-4c62-4363-9b03-1893a02aa4bf",
+            "sourceColumn": "tp_isostandardname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "154c044d-ad7d-499b-adcc-c40fcdc59082",
+            "sourceColumn": "tp_audittitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Process Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "38cd948f-36d0-48da-b9db-4a697f876f80",
+            "sourceColumn": "processid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total NCRs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4209b694-4eae-41b1-bd39-97403e093c7b",
+            "sourceColumn": "crb09_totalauditfindings",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Closed NCRs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "26dc3f64-4700-4561-b6eb-b083dc48969d",
+            "sourceColumn": "crb09_closedauditfindings",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Audit Finding NCR Progress %",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6baa29e3-6ef3-4d72-a47e-f76e1dd50e99",
+            "sourceColumn": "crb09_auditfindingprogress",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Audit ISO 9001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6c784564-d9a2-41cb-b994-7546c9039805",
+            "sourceColumn": "crb09_auditiso9001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Auditee",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6e190023-31d0-4b4b-b1c0-64869447a65d",
+            "sourceColumn": "tp_auditee",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Auditor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08b3609b-0086-4b19-8a6d-81aedccca557",
+            "sourceColumn": "tp_auditor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Process",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54717dbf-870a-4bd4-b34f-48e87436ac23",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 14001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "63eca843-51ec-4965-b927-b4ba23a5441f",
+            "sourceColumn": "tp_auditiso14001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 45001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bd1816d6-9845-4da9-a4c9-08c3572cd3d3",
+            "sourceColumn": "tp_auditiso45001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding OBS Progress %",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "21c7fba4-2a16-46ec-b0d3-dfdf2e4076c9",
+            "sourceColumn": "tp_auditfindingprogressobs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Closed OBS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eeb9107b-642f-44b4-b882-8266a1af503b",
+            "sourceColumn": "tp_closedobs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Closed OBS (Last Updated On)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "69f5b1c9-19fb-4eed-a269-4f1402e83c03",
+            "sourceColumn": "tp_closedobs_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed OBS (State)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bd18b781-329a-4acb-9dfc-9f02bafbf6fd",
+            "sourceColumn": "tp_closedobs_state",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total OBS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "89f98418-770b-4c77-834d-48abf23b3ad0",
+            "sourceColumn": "tp_totalobs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total OBS (Last Updated On)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "94eb31e9-8e43-452a-93e0-75927cee8348",
+            "sourceColumn": "tp_totalobs_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total OBS (State)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7243304a-d467-4532-bb06-9ccf88a64a76",
+            "sourceColumn": "tp_totalobs_state",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Schedule Confirmed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bd342b59-014b-49ed-80ce-2a2b2e8bdbd0",
+            "sourceColumn": "crb09_auditconfirmedname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Issued",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "32ac8a4f-b8e0-433f-9741-f3c6c2e2a702",
+            "sourceColumn": "crb09_reportissuedname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Report Issued Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "2d49b32d-f1dd-4c1a-8b93-bab00afc829f",
+            "sourceColumn": "crb09_reportissueddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "ffe05bd0-ee3d-4d8d-bb52-b9ee2c1581b0",
+            "sourceColumn": "crb09_closeddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding REC Progress %",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "68050e96-f9f9-4d39-b8d6-8fb9aa1ca26e",
+            "sourceColumn": "crb09_auditfindingrecprogress",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Closed RECs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e1f2c1f2-85e7-4bd9-9473-a902caee52be",
+            "sourceColumn": "crb09_closedrecs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Closed RECs (Last Updated On)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "ea228a60-82a5-40d3-96fc-93081ad47005",
+            "sourceColumn": "crb09_closedrecs_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed RECs (State)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d9c167c2-f179-45e6-bb93-ea03adecfbcd",
+            "sourceColumn": "crb09_closedrecs_state",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total RECs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5b321e95-5aff-454e-a2b7-821122c91aa7",
+            "sourceColumn": "crb09_totalrecs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total RECs (Last Updated On)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "4d0e6935-eefb-4a7c-b8e8-06745bb30a95",
+            "sourceColumn": "crb09_totalrecs_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total RECs (State)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5f842282-98b9-4c6d-bb1f-c26698a67958",
+            "sourceColumn": "crb09_totalrecs_state",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tp_projectname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aab3dfbc-b07a-4a9e-86c1-5f4cef14e49c",
+            "sourceColumn": "tp_projectname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Project Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "988554d0-0dd6-41cf-b9ad-d77d036c46c1",
+            "sourceColumn": "tp_projectnamename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Performance Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "if(tp_audit[Planned Start Date]>=TODAY() && tp_audit[Actual Start Date]=BLANK(), \"Planned\",",
+              "    if(NOT(ISBLANK(tp_audit[Actual Start Date])) && (NOT(ISBLANK(tp_audit[Actual End Date]))), \"Completed\",",
+              "    if(tp_audit[Planned Start Date]<=TODAY() && tp_audit[Actual Start Date]=BLANK(),\"Overdue\")))"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "a59d9ab9-3045-4d3d-ac72-adb1d7a56e74",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "crb09_gsippprojectlist.crb09_costpointid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ae7d396d-cd4d-4366-bba5-224d3a0e1800",
+            "sourceColumn": "crb09_gsippprojectlist.crb09_costpointid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 44001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "404bcd0d-1a36-475e-82b4-90cdf44feffb",
+            "sourceColumn": "new_auditiso44001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "064a3f79-18f3-4e71-ac21-a01829694db7",
+            "sourceColumn": "tp_ownername",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total NCRs (Last Updated On)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "bdb5d917-660d-4246-a03e-ce8fed55ccca",
+            "sourceColumn": "crb09_totalauditfindings_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total NCRs (State)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "01cdac6a-fe8a-49b6-9ba6-de665e146570",
+            "sourceColumn": "crb09_totalauditfindings_state",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Closed NCRs (Last Updated On)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "fc014e65-bbcf-4a3e-8922-1b1a02c55354",
+            "sourceColumn": "crb09_closedauditfindings_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed NCRs (State)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3d5439ff-991f-4a63-9751-d01f3db76a6b",
+            "sourceColumn": "crb09_closedauditfindings_state",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Audit ISO 22301 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "48d9bfe5-60c0-4dda-a2ca-e75ce97f138f",
+            "sourceColumn": "new_auditiso22301clauses",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ff3dbbd9-d056-44f3-9b6a-51b28878bb55",
+        "partitions": [
+          {
+            "name": "tp_audit",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\", []),",
+                "    dbo_tp_audit = Source{[Schema=\"dbo\",Item=\"tp_audit\"]}[Data],",
+                "    #\"Expanded crb09_gsippprojectlist\" = Table.ExpandRecordColumn(dbo_tp_audit, \"crb09_gsippprojectlist\", {\"crb09_costpointid\"}, {\"crb09_gsippprojectlist.crb09_costpointid\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Expanded crb09_gsippprojectlist\",{\"createdon\", \"createdby\", \"modifiedon\", \"modifiedby\", \"createdonbehalfby\", \"modifiedonbehalfby\", \"createdbyname\", \"createdbyyominame\", \"createdonbehalfbyname\", \"createdonbehalfbyyominame\", \"modifiedbyname\", \"modifiedbyyominame\", \"modifiedonbehalfbyname\", \"modifiedonbehalfbyyominame\", \"owneridyominame\", \"owningbusinessunit\", \"owninguser\", \"owningteam\", \"owningbusinessunitname\", \"statecode\", \"statecodename\", \"statuscode\", \"statuscodename\", \"importsequencenumber\", \"overriddencreatedon\", \"timezoneruleversionnumber\", \"utcconversiontimezonecode\", \"crb09_auditconfirmed\", \"crb09_reportissued\", \"stageid\", \"tp_auditisoclauses\", \"tp_auditisoclausesname\", \"tp_audittype\", \"tp_comments\", \"tp_isostandard\", \"tp_markets\", \"tp_status\", \"traversedpath\", \"tp_owneryominame\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "crb09_auditrecommendations",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ed4858bc-6fbb-4a6c-bda2-652378a289fc",
+            "sourceColumn": "crb09_auditrecommendationsid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ownerid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "370b9f9e-5abc-4710-ae03-cbf1ad3b411b",
+            "sourceColumn": "ownerid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e2e1655-a196-4c23-b2a1-7201e897553e",
+            "sourceColumn": "owneridname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b84ef612-a279-4c5a-88a7-49695b99ebc3",
+            "sourceColumn": "crb09_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_auditfindingowner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08b25fb5-d00e-4883-8383-983cdbc832f6",
+            "sourceColumn": "crb09_auditfindingowner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2fc8f432-ddea-4894-b9b6-9a4085bc17a8",
+            "sourceColumn": "crb09_auditfindingownername",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56b62822-78c8-49b3-8bcf-fcd0a3c482fb",
+            "sourceColumn": "crb09_auditfindingstatusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f5164dea-29ff-431c-8f8c-5f2b0c2538c9",
+            "sourceColumn": "crb09_auditfindingdescription",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_parentaudit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00c0bfc7-bdc4-4e50-8a55-e2e9641c4ae6",
+            "sourceColumn": "crb09_parentaudit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Audit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2ad7924d-c7a9-48b9-a3ec-da7929e9fa3c",
+            "sourceColumn": "crb09_parentauditname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fae6df71-0f38-49c3-8204-124066bf683d",
+            "sourceColumn": "crb09_auditfindingtitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Process",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3c38aa31-a935-4f6a-9029-0253721d6442",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "82ef33e0-dd03-4c17-a269-a1b1a631f10b",
+            "sourceColumn": "crb09_closeddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Due_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "8001ec56-f3f7-4e84-9e2a-bac2443d1cdc",
+            "sourceColumn": "new_due_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Raised_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "898ac3e6-f45c-47f2-b2c7-ad203e189439",
+            "sourceColumn": "new_raised_date",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bd4394ce-6e01-414d-b75a-a09a5fea4a0e",
+        "partitions": [
+          {
+            "name": "crb09_auditrecommendations",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\", []),",
+                "    dbo_crb09_auditrecommendations = Source{[Schema=\"dbo\",Item=\"crb09_auditrecommendations\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_crb09_auditrecommendations,{\"createdon\", \"createdby\", \"modifiedon\", \"modifiedby\", \"createdonbehalfby\", \"modifiedonbehalfby\", \"createdbyname\", \"createdbyyominame\", \"createdonbehalfbyname\", \"createdonbehalfbyyominame\", \"modifiedbyname\", \"modifiedbyyominame\", \"modifiedonbehalfbyname\", \"modifiedonbehalfbyyominame\", \"owneridyominame\", \"owningbusinessunit\", \"owninguser\", \"owningteam\", \"owningbusinessunitname\", \"statecode\", \"statecodename\", \"statuscode\", \"statuscodename\", \"importsequencenumber\", \"overriddencreatedon\", \"timezoneruleversionnumber\", \"utcconversiontimezonecode\", \"crb09_auditfindingstatus\", \"crb09_auditfindingduedate\", \"crb09_raiseddate\", \"crb09_auditfindingowneryominame\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "tp_auditfindings",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c9df5a75-ff6d-49cc-8973-6bfd02d7702c",
+            "sourceColumn": "tp_auditfindingsid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ownerid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "998453de-68bc-43ae-8ffd-0c0d2c4ebe23",
+            "sourceColumn": "ownerid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea1c1044-ec23-42cb-83df-4ea0505816b3",
+            "sourceColumn": "owneridname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6c00e581-8b9b-4fbf-9aa0-6c95b838718e",
+            "sourceColumn": "tp_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2a595cfd-0142-42cb-9d9f-dc88fd214cf2",
+            "sourceColumn": "tp_auditfindingtypename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tp_parentaudit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d40d5747-6b8d-4ad8-8185-a79130219f64",
+            "sourceColumn": "tp_parentaudit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Audit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "202f0fad-8a4c-4ac0-98f2-50310d488843",
+            "sourceColumn": "tp_parentauditname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d84d6723-7d17-4f56-bd50-cc3e4fac2108",
+            "sourceColumn": "tp_findingdescription",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ISO Standard",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52839d36-901f-49b3-a8ca-036038726d78",
+            "sourceColumn": "tp_isostandardname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tp_auditfindingstatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "26727248-d1d4-4449-a520-b4846971e966",
+            "sourceColumn": "tp_auditfindingstatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Audit Finding Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0b1bc84b-ceaf-42ea-b5f8-c76324bb3b00",
+            "sourceColumn": "tp_auditfindingstatusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tp_auditfindingowner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1af4cfc-4654-4ae9-acaa-93c98e15362f",
+            "sourceColumn": "tp_auditfindingowner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8cdab674-54c8-4c7d-8b32-74e3f3a6c09b",
+            "sourceColumn": "tp_auditfindingtitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_auditfindingowner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5108c4b5-d80f-4052-89d9-452ab9379629",
+            "sourceColumn": "crb09_auditfindingowner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "33d9a29f-ded5-475e-aadd-6f7ced7babbc",
+            "sourceColumn": "crb09_auditfindingownername",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Process",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54711f89-2a29-4f83-9269-6d462d5708ef",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "ecdd6b95-ad68-4cf7-839a-efa73f2392db",
+            "sourceColumn": "crb09_closeddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 9001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "723617d2-745c-4cfc-8dcd-56879235c5a7",
+            "sourceColumn": "crb09_auditiso9001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 14001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "931f4c04-2a7d-4ec3-baaa-bf8b599b2b77",
+            "sourceColumn": "crb09_auditiso14001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 45001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3ce136f5-0e3f-4a46-b93c-51f00251b906",
+            "sourceColumn": "crb09_auditiso45001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Overdue NCRs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "IF(NOT(ISBLANK('tp_auditfindings'[Closed Date])),\"Closed\",IF('tp_auditfindings'[Due_Date]<TODAY()&& ISBLANK('tp_auditfindings'[Closed Date]),\"Overdue\",\"Open\"))",
+            "isDataTypeInferred": true,
+            "lineageTag": "eaa936e6-0cd2-4e0e-ad12-9219dcf56dbf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Audit ISO 44001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8e11e420-e794-4824-8864-b45233c586e3",
+            "sourceColumn": "new_auditiso44001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Due_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "a7afb633-2abe-41dc-91ac-bf0987872e22",
+            "sourceColumn": "crb09_due_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Raised_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "f16c218a-84c2-4551-aa44-e82c1ce2f859",
+            "sourceColumn": "crb09_raised_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 22301 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "411aadbe-4834-4595-bf4b-69b217663d09",
+            "sourceColumn": "new_auditiso22301clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Days since due date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9bf640f7-0344-43e5-a18e-2faa65c499e7",
+            "sourceColumn": "Days since due date",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "7ad23052-a2ca-4ed0-a063-3fc69f5aa98e",
+        "partitions": [
+          {
+            "name": "tp_auditfindings",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\", []),",
+                "    dbo_tp_auditfindings = Source{[Schema=\"dbo\",Item=\"tp_auditfindings\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_tp_auditfindings,{{\"crb09_raised_date\", type date}, {\"crb09_due_date\", type datetime}, {\"crb09_closeddate\", type date}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Changed Type\", \"Days overdue\", each Duration.Days(Duration.From(DateTime.LocalNow()-[crb09_due_date]))),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Custom\",{{\"Days overdue\", \"Days since due date\"}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Days since due date\", Int64.Type}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type1\",{\"createdon\", \"createdby\", \"modifiedon\", \"modifiedby\", \"createdonbehalfby\", \"modifiedonbehalfby\", \"createdbyname\", \"createdbyyominame\", \"createdonbehalfbyname\", \"createdonbehalfbyyominame\", \"modifiedbyname\", \"modifiedbyyominame\", \"modifiedonbehalfbyname\", \"modifiedonbehalfbyyominame\", \"owneridyominame\", \"owningbusinessunit\", \"owninguser\", \"owningteam\", \"owningbusinessunitname\", \"statecode\", \"statecodename\", \"statuscode\", \"statuscodename\", \"importsequencenumber\", \"overriddencreatedon\", \"timezoneruleversionnumber\", \"utcconversiontimezonecode\", \"tp_auditfindingtype\", \"tp_isostandard\", \"crb09_duedate\", \"crb09_raiseddate\", \"crb09_auditfindingowneryominame\", \"tp_auditfindingownername\", \"tp_auditfindingowneryominame\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "tp_auditsubtasks",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Audit Subtasks",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "46efadd0-9175-4124-b3a4-1f0edbecf4cf",
+            "sourceColumn": "tp_auditsubtasksid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ownerid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65306298-0b4f-49fb-8792-92664cfb7fc2",
+            "sourceColumn": "ownerid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cb57fb1c-3534-4c31-9c96-574b36da6fb2",
+            "sourceColumn": "owneridname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask No.",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0467340e-62e2-47a5-8d12-de34871df913",
+            "sourceColumn": "tp_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "199aad84-f6d5-4ec2-a697-450d80b4ad6f",
+            "sourceColumn": "tp_subtasktypename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Action Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "53eef8fe-e635-4b9b-aec3-775100992625",
+            "sourceColumn": "tp_subtaskactiontypename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tp_parentauditfinding",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a252582-b4e2-4894-a6c8-c937cf7061cf",
+            "sourceColumn": "tp_parentauditfinding",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Non-Conformance",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "553cf65f-34dc-42d2-bf69-fbd509697b71",
+            "sourceColumn": "tp_parentauditfindingname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56ad6c37-c8de-4039-b639-5aaff902e24a",
+            "sourceColumn": "crb09_subtaskstatusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Raised Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "ca423cbd-c53d-408f-87c4-3a3fc2469534",
+            "sourceColumn": "crb09_subtaskraiseddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Due Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "47fb18e7-4353-48cf-8b42-ca7c50b851b6",
+            "sourceColumn": "crb09_subtaskduedate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tp_assignee",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4759522-f4fb-4a98-8f51-96b4e762f2b4",
+            "sourceColumn": "tp_assignee",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Assignee",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e2ddd1c7-d350-48f5-a239-607870481ff8",
+            "sourceColumn": "tp_assigneename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_parentobservation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5f33e7b-2c00-46f3-92b4-347c763c93ba",
+            "sourceColumn": "crb09_parentobservation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Observation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a833fa4a-a6cf-47ce-a919-2e2ed07a346c",
+            "sourceColumn": "crb09_parentobservationname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_parentrecommendation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "50d8af87-8b2e-4c33-b18a-e0981c7b5e22",
+            "sourceColumn": "crb09_parentrecommendation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Recommendation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d10d9801-146d-4ac3-94a0-4d345ad1f640",
+            "sourceColumn": "crb09_parentrecommendationname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Action",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "76c80c85-e765-4075-b479-62e322a8bbdc",
+            "sourceColumn": "tp_subtaskaction",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RCA 5 Why's",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ffd6dd76-5f69-4aa0-9c59-dd09ffba75cb",
+            "sourceColumn": "crb09_rca5whys",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_rootcausecategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3d915e89-a461-4a19-bce5-9806a6497377",
+            "sourceColumn": "crb09_rootcausecategory",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Root Cause Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a7b6eaf2-4823-49a9-92f6-bd0760450be0",
+            "sourceColumn": "crb09_rootcausecategoryname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subtask Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "19b45661-527d-4ace-919b-f23c112da6cf",
+            "sourceColumn": "crb09_subtaskcloseddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13ad2644-38a2-4451-acfb-8464ea3bd089",
+            "sourceColumn": "crb09_auditfindingdescription",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Root Cause Identified",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f820614a-ada0-44ca-b103-2e5230f0d1e1",
+            "sourceColumn": "crb09_rootcauseidentified",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cleared Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "373b9593-6b43-4edc-90fa-60ebfbdde293",
+            "sourceColumn": "crb09_cleareddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_parentcomplaint",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d33d1204-3568-435c-854f-cf66258e6b61",
+            "sourceColumn": "crb09_parentcomplaint",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Complaint",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f691d50e-d752-4911-9be9-1eca7b5a5477",
+            "sourceColumn": "crb09_parentcomplaintname",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a660d1e2-bf3c-48a4-ab52-25557115679e",
+        "partitions": [
+          {
+            "name": "tp_auditsubtasks",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\", []),",
+                "    dbo_tp_auditsubtasks = Source{[Schema=\"dbo\",Item=\"tp_auditsubtasks\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_tp_auditsubtasks,{\"createdon\", \"createdby\", \"modifiedon\", \"modifiedby\", \"createdonbehalfby\", \"modifiedonbehalfby\", \"createdbyname\", \"createdbyyominame\", \"createdonbehalfbyname\", \"createdonbehalfbyyominame\", \"modifiedbyname\", \"modifiedbyyominame\", \"modifiedonbehalfbyname\", \"modifiedonbehalfbyyominame\", \"owneridyominame\", \"owningbusinessunit\", \"owninguser\", \"owningteam\", \"owningbusinessunitname\", \"statecode\", \"statecodename\", \"statuscode\", \"statuscodename\", \"importsequencenumber\", \"overriddencreatedon\", \"timezoneruleversionnumber\", \"utcconversiontimezonecode\", \"crb09_subtaskstatus\", \"tp_subtaskactiontype\", \"tp_subtasktype\", \"tp_assigneeyominame\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "crb09_observations",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17ea31d3-1d3a-4791-aca1-a588a992705d",
+            "sourceColumn": "crb09_observationsid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ownerid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5b195626-59c1-48ab-8fed-aa271bf10fe4",
+            "sourceColumn": "ownerid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7829a70-d702-48c9-b5d8-7cc4c039b115",
+            "sourceColumn": "owneridname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "175a2111-dcd9-499b-9821-e8e9976c19a5",
+            "sourceColumn": "crb09_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b43c8dea-0d14-4561-b765-38eb4720b85b",
+            "sourceColumn": "crb09_auditfindingdescription",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_auditfindingowner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ffc8d177-c0fe-4934-aa0a-c54e8b296b06",
+            "sourceColumn": "crb09_auditfindingowner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59811c6f-1ad4-44ae-8329-1246ea57b2db",
+            "sourceColumn": "crb09_auditfindingownername",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Finding Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d0d09554-217c-4dfe-a9ad-85fc1cd72b31",
+            "sourceColumn": "crb09_auditfindingstatusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c7e8ee1-3c52-4e07-a227-437eaa7b3306",
+            "sourceColumn": "crb09_auditfindingtitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ISO Standard",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "afe659b1-7365-445c-98f8-5021c5333630",
+            "sourceColumn": "crb09_isostandardname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_parentaudit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a16531cc-aed8-4b20-8b4e-45d36d703532",
+            "sourceColumn": "crb09_parentaudit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Parent Audit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e7816272-8312-42aa-90c0-20fe0af4cac2",
+            "sourceColumn": "crb09_parentauditname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit Process",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf47a9ad-2cef-455c-8b73-bf703b4fdf2f",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "c10402cd-ac44-40a5-9a73-b93ed8359dda",
+            "sourceColumn": "crb09_closeddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 9001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3f6305c0-fda6-41fd-a804-40a7e9c972e6",
+            "sourceColumn": "crb09_auditiso9001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 14001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c9b2745-17d4-4a04-96b3-028b24da23aa",
+            "sourceColumn": "crb09_auditiso14001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 45001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f0ba4e01-bb08-4ce0-a90d-9099636ade70",
+            "sourceColumn": "crb09_auditiso45001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Overdue OBS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "IF(NOT(ISBLANK('crb09_observations'[Closed Date])),\"Closed\",IF('crb09_observations'[Due_Date]<TODAY()&& ISBLANK(crb09_observations[Closed Date]),\"Overdue\",\"Open\"))",
+            "isDataTypeInferred": true,
+            "lineageTag": "4dd6a0d5-c46f-4b46-934f-3a529137f65b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Audit ISO 44001 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "682b9e78-83b6-48b1-a9a7-1185a0df0858",
+            "sourceColumn": "new_auditiso44001clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Due_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "c84c9dae-dac9-4012-b1cd-42dd9bef1730",
+            "sourceColumn": "new_due_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Raised_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "375b4422-3058-49ab-a044-01938403d8ea",
+            "sourceColumn": "new_raised_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Audit ISO 22301 Clauses",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5e29ac06-d2d3-42bd-b659-42ee875acc6f",
+            "sourceColumn": "new_auditiso22301clauses",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Days since due date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2090e011-7fd1-4788-a37c-7b4fa0b0f015",
+            "sourceColumn": "Days since due date",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "1ad52233-288b-40ed-9867-569df5352ac0",
+        "measures": [
+          {
+            "name": "Open OBS",
+            "expression": "COUNTROWS(FILTER('crb09_observations', ('crb09_observations'[Audit Finding Status]= \"Open\")))",
+            "formatString": "0",
+            "lineageTag": "1a55fee2-b697-4288-bed8-828b15a8f367"
+          },
+          {
+            "name": "OBS Average days late",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE (",
+              "    AVERAGE ( crb09_observations[Days since due date] ),",
+              "    FILTER ( ALL ( crb09_observations ), [Overdue OBS] = \"Overdue\" ))"
+            ],
+            "lineageTag": "62648e3a-b2c6-49eb-9b72-5140486a4144"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "crb09_observations",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\", []),",
+                "    dbo_crb09_observations = Source{[Schema=\"dbo\",Item=\"crb09_observations\"]}[Data],",
+                "    #\"Added Custom\" = Table.AddColumn(dbo_crb09_observations, \"Days overdue\", each Duration.Days(Duration.From(DateTime.LocalNow()-[new_due_date]))),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Days overdue\", Int64.Type}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Days overdue\", \"Days since due date\"}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"createdon\", \"createdby\", \"modifiedon\", \"modifiedby\", \"createdonbehalfby\", \"modifiedonbehalfby\", \"createdbyname\", \"createdbyyominame\", \"createdonbehalfbyname\", \"createdonbehalfbyyominame\", \"modifiedbyname\", \"modifiedbyyominame\", \"modifiedonbehalfbyname\", \"modifiedonbehalfbyyominame\", \"owneridyominame\", \"owningbusinessunit\", \"owninguser\", \"owningteam\", \"owningbusinessunitname\", \"statecode\", \"statecodename\", \"statuscode\", \"statuscodename\", \"importsequencenumber\", \"overriddencreatedon\", \"timezoneruleversionnumber\", \"utcconversiontimezonecode\", \"crb09_auditfindingstatus\", \"crb09_isostandard\", \"crb09_duedate\", \"crb09_raiseddate\", \"crb09_auditfindingowneryominame\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "crb09_gsippprojectlist",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Created On",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "a394e524-2490-49d2-bc3d-3413768dcb80",
+            "sourceColumn": "createdon",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "createdby",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8abbde49-b2f7-4098-ab99-74de851c95c5",
+            "sourceColumn": "createdby",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Modified On",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "da3e3008-c4a6-438f-8b28-9d4ec075d019",
+            "sourceColumn": "modifiedon",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "modifiedby",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "371f6793-d2a3-4af2-9ece-2ea702bda02b",
+            "sourceColumn": "modifiedby",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "createdonbehalfby",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6be078eb-89f7-47b2-876a-0959c8d1b9ca",
+            "sourceColumn": "createdonbehalfby",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "modifiedonbehalfby",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "38fcff8e-e377-46b7-93a4-6f6757bd9710",
+            "sourceColumn": "modifiedonbehalfby",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Created By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b74ab0cc-a5e1-4452-ac17-371f23b66e86",
+            "sourceColumn": "createdbyname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "createdbyyominame",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4c83535b-e7de-4c2f-ad24-d9959d14fcb4",
+            "sourceColumn": "createdbyyominame",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Created By (Delegate)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bffac99d-dd52-412d-b8da-0d9cc415f17c",
+            "sourceColumn": "createdonbehalfbyname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "createdonbehalfbyyominame",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e732b49b-653c-4433-ad42-f780cd8b3a15",
+            "sourceColumn": "createdonbehalfbyyominame",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Modified By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "25983d5d-5750-484d-acb1-5533ef3fe6e7",
+            "sourceColumn": "modifiedbyname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "modifiedbyyominame",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ff7bb1bf-7e35-448b-a55a-918c40555d9e",
+            "sourceColumn": "modifiedbyyominame",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Modified By (Delegate)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4ad987a8-33db-44eb-aff4-7c25a930613e",
+            "sourceColumn": "modifiedonbehalfbyname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "modifiedonbehalfbyyominame",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c3f46aaf-509f-47fe-84d0-1c3912ab0c4a",
+            "sourceColumn": "modifiedonbehalfbyyominame",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ownerid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b6d8b848-4c71-4533-ad31-9d71cfc1e81c",
+            "sourceColumn": "ownerid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3b9e5d5b-a1d0-4477-9042-b0494284e499",
+            "sourceColumn": "owneridname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owneridyominame",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ce8d4096-6455-46a1-bb90-32d02c8a07b9",
+            "sourceColumn": "owneridyominame",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owningbusinessunit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3da36335-dc9c-4d7a-8142-47e47891f811",
+            "sourceColumn": "owningbusinessunit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owninguser",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3dd6c5e7-1b8b-4f18-bd00-2a8bbac94ecb",
+            "sourceColumn": "owninguser",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owningteam",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8b120c31-5bf2-44ca-b4f7-47240a1e60bd",
+            "sourceColumn": "owningteam",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Owning Business Unit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fef9dd58-9bd0-4d48-89d1-00e2cb77915b",
+            "sourceColumn": "owningbusinessunitname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1a003f2b-54c7-488f-9e67-11835b6b9481",
+            "sourceColumn": "statecode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "statecodename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8d27b291-818d-4d7d-ab86-7d354f0c95b6",
+            "sourceColumn": "statecodename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status Reason",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d7706ebf-9838-4aec-b04d-64e2d863757e",
+            "sourceColumn": "statuscode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "statuscodename",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9b008eee-6b25-47f7-b26c-f3a1c59a276e",
+            "sourceColumn": "statuscodename",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Import Sequence Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e98faf7b-d2d6-4d06-9a9b-fb6ef8949db8",
+            "sourceColumn": "importsequencenumber",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Record Created On",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "cacae0fa-00ae-4f11-b11b-2a60e474d79d",
+            "sourceColumn": "overriddencreatedon",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Time Zone Rule Version Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bc8d026b-e316-43d1-b5ef-d09e48f881af",
+            "sourceColumn": "timezoneruleversionnumber",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UTC Conversion Time Zone Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "76894fd0-527c-4cf1-a4ff-f7391c971bb8",
+            "sourceColumn": "utcconversiontimezonecode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ACTIVE_FL1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "676dae07-0602-452d-9bcc-19652820311c",
+            "sourceColumn": "crb09_active_fl1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "COMPANY_ID1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2ab90307-18ee-415f-8e04-62d242729aa7",
+            "sourceColumn": "crb09_company_id1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CUST_LONG_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3f74df01-27c9-4747-88fc-38e0c14ca645",
+            "sourceColumn": "crb09_cust_long_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CUST_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e62c0921-05b6-4e56-9fd9-a6be76c4462a",
+            "sourceColumn": "crb09_cust_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CUST_TYPE_DC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "36ecb70c-9348-408b-bb03-2109646e6188",
+            "sourceColumn": "crb09_cust_type_dc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "L1_ORG_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b36ff905-9eee-4f71-a48d-cc1e193fc19b",
+            "sourceColumn": "crb09_l1_org_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "L1_PROJ_NAME1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0818bad4-bf11-404d-9986-7bf8501d18c8",
+            "sourceColumn": "crb09_l1_proj_name1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "L2_ORG_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7d924ac2-affd-4476-8b59-0a4aa1e80b00",
+            "sourceColumn": "crb09_l2_org_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "L3_ORG_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0ebaec3f-a820-4f80-be3f-39339b270718",
+            "sourceColumn": "crb09_l3_org_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "L4_ORG_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a9e750a9-7807-467d-92e5-0bfa47b2f6f3",
+            "sourceColumn": "crb09_l4_org_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ORG_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4bf929d0-6238-487b-8b49-fe0cb6dcf6e5",
+            "sourceColumn": "crb09_org_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PROJ_END_DT1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "4118177b-baaa-47f5-9df1-b01b21121901",
+            "sourceColumn": "crb09_proj_end_dt1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PROJ_MGR_NAME1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "545d8f9e-a34b-4873-ac6a-a54b8c31746a",
+            "sourceColumn": "crb09_proj_mgr_name1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PROJ_NAME1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2987f4d2-aa03-41be-9bff-cff0671752a4",
+            "sourceColumn": "crb09_proj_name1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PROJ_START_DT1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "b3113061-f202-44f6-a308-a7af19ece858",
+            "sourceColumn": "crb09_proj_start_dt1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Project _Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a54b8ffb-f7cb-431a-9251-4a21899af6b6",
+            "sourceColumn": "crb09_project_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GSI P&P Project List",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "938cf646-9eda-45e7-8fff-176ab530fae5",
+            "sourceColumn": "crb09_gsippprojectlistid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CostpointID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "28deb27e-f8ad-49d1-9e34-741a9edaa587",
+            "sourceColumn": "crb09_costpointid",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "94390b8f-5885-485c-ab66-fdb183ef582c",
+        "partitions": [
+          {
+            "name": "crb09_gsippprojectlist",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\", []),",
+                "    dbo_crb09_gsippprojectlist = Source{[Schema=\"dbo\",Item=\"crb09_gsippprojectlist\"]}[Data]",
+                "in",
+                "    dbo_crb09_gsippprojectlist"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Reporting Calendar",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "cd72cc3133774c23abf05107b53d4835"
+          }
+        ],
+        "columns": [
+          {
+            "name": "CalendarDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": false,
+            "lineageTag": "8fca5a03-4ddd-4d83-a8b7-a22c06677cb9",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "94f5e77f-9ecd-4b1b-a930-3a4e7be7fbf7",
+            "sourceColumn": "[Year]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "d1d8161c-3f56-43fa-ab79-5a65d3301973",
+            "sourceColumn": "[Quarter]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "83312c30-9a4a-4265-86d3-f35153cbb1e9",
+            "sortByColumn": "Month Number",
+            "sourceColumn": "[Month]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Month Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "fb307a5d-0d49-45c9-97d5-1c719c1c87ce",
+            "sourceColumn": "[Month Number]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "4c2a19cd-58c3-4b01-83bf-3cd22e48fe7e",
+        "partitions": [
+          {
+            "name": "Reporting Calendar",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "ADDCOLUMNS (",
+                "    CALENDARAUTO (),",
+                "    \"Year\", YEAR ( [Date] ),",
+                "    \"Quarter\", \"Q\" & QUARTER ( [Date] ),",
+                "    \"Month\", FORMAT ( [Date], \"mmmm\" ),",
+                "    \"Month Number\", MONTH ( [Date] )",
+                ")"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Reporting Calendar for NCR",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "e102e2d9d6f447c7b4f61be4b2d170d9"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "036f34f8-5eb7-487e-91de-2e7ec08a4b54",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "2067c4eb-5fab-47db-9062-023a37676e81",
+            "sourceColumn": "[Year]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "d346e014-049f-419e-b496-9d13529e0d2f",
+            "sourceColumn": "[Quarter]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "96d28641-eec0-4483-b21e-f1e3775f3457",
+            "sortByColumn": "Month Number",
+            "sourceColumn": "[Month]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Month Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "5df3e6cb-1d37-4262-81a3-849fc6a869fe",
+            "sourceColumn": "[Month Number]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "00407e1f-b8d2-4a3f-84f2-eb748fc47f48",
+        "partitions": [
+          {
+            "name": "Reporting Calendar for NCR",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "ADDCOLUMNS (",
+                "    CALENDARAUTO (),",
+                "    \"Year\", YEAR ( [Date] ),",
+                "    \"Quarter\", \"Q\" & QUARTER ( [Date] ),",
+                "    \"Month\", FORMAT ( [Date], \"mmmm\" ),",
+                "    \"Month Number\", MONTH ( [Date] )",
+                ")"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Audit Process",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Audit Process Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6faca828-c3e7-4e28-9bf4-5764ff61f168",
+            "sourceColumn": "Audit Process Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_auditprocess",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0c0929a1-5969-484f-8a18-ef8ce075bc7d",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Process Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a82098ed-3ad7-4607-aa7a-50fa6366bf44",
+            "sourceColumn": "Process Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5e8363ce-48ce-49d6-b071-4d023cc4d676",
+        "partitions": [
+          {
+            "name": "Audit Process",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = tp_audit,",
+                "    Select = Table.SelectColumns(Source,{\"crb09_auditprocess\"}),",
+                "    Rename = Table.RenameColumns(Select,{{\"crb09_auditprocess\", \"Audit Process Group\"}}),",
+                "    AddSplitTypes = ",
+                "        Table.AddColumn(",
+                "            Rename, ",
+                "            \"crb09_auditprocess\", ",
+                "            each Text.Split( [Audit Process Group], \",\" ), ",
+                "            type {text} ",
+                "        ),",
+                "    ExpandAuditProcess = Table.ExpandListColumn(AddSplitTypes, \"crb09_auditprocess\"),",
+                "    Distinct = Table.Distinct(ExpandAuditProcess),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(Distinct, \"Process Name\", each if [crb09_auditprocess] = \"1\" then \"Innovation\" else if [crb09_auditprocess] = \"2\" then \"Quality Management\" else if [crb09_auditprocess] = \"3\" then \"Resourcing\" else if [crb09_auditprocess] = \"4\" then \"Social Value​\" else if [crb09_auditprocess] = \"5\" then \"Leadership​\" else if [crb09_auditprocess] = \"6\" then \"Engineering\" else if [crb09_auditprocess] = \"7\" then \"PMO​\" else if [crb09_auditprocess] = \"8\" then \"Project Controls​\" else if [crb09_auditprocess] = \"9\" then \"Project Management\" else if [crb09_auditprocess] = \"10\" then \"Sales​\" else if [crb09_auditprocess] = \"11\" then \"Supply Chain​\" else if [crb09_auditprocess] = \"12\" then \"Warehouse Management​\" else if [crb09_auditprocess] = \"13\" then \"Food Safety​\" else if [crb09_auditprocess] = \"14\" then \"Accounting & Finance​\" else if [crb09_auditprocess] = \"15\" then \"Information Management & Systems​\" else if [crb09_auditprocess] = \"16\" then \"Health, Safety & Environment​\" else if [crb09_auditprocess] = \"17\" then \"Commercial​\" else if [crb09_auditprocess] = \"18\" then \"Communication\" else if [crb09_auditprocess] = \"19\" then \"Human Resources​\" else if [crb09_auditprocess] = \"20\" then \"Legal​\" else if [crb09_auditprocess] = \"21\" then \"Security​\" else if [crb09_auditprocess] = \"22\" then \"Information Security​\" else null)",
+                "in",
+                "    #\"Added Conditional Column\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Complaints",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f784456-bb30-447d-a51e-be221a01ce14",
+            "sourceColumn": "crb09_title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cleared Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "632d3eb7-4ae5-4e87-8acf-e50306013c92",
+            "sourceColumn": "crb09_cleareddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "a21f0c14-79eb-44b3-9b8b-a2b5098aac11",
+            "sourceColumn": "crb09_closeddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_complaintowner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "88684446-872a-4a47-a373-45e51db852fb",
+            "sourceColumn": "crb09_complaintowner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_complaintstatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1f3ec8a9-340d-4c97-9411-1b6d625e408c",
+            "sourceColumn": "crb09_complaintstatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Complaint Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e10885b1-842f-4d96-b1c6-1430ea99b7a9",
+            "sourceColumn": "crb09_complaintstatusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Complaint Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c8ac26b0-1dd2-4ea1-8e7c-de39a1dfe356",
+            "sourceColumn": "crb09_complainttitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "98ecf14d-7974-4546-8b3d-f1cc10a56806",
+            "sourceColumn": "crb09_description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_market",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "60742300-e953-4c87-aeda-f5952e76fdd4",
+            "sourceColumn": "crb09_market",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Market",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9ac54c6f-b700-4884-ba4b-8a88dd93c1b0",
+            "sourceColumn": "crb09_marketname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Received Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "35c16785-ecad-4c84-83e7-0fc4106220b6",
+            "sourceColumn": "crb09_receiveddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Complaint Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7a776e63-af55-4f85-ace8-ed3ad5ea27fd",
+            "sourceColumn": "crb09_complaintownername",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Project Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "212d244b-4f6b-449e-97c0-fe9e7ef1d2c6",
+            "sourceColumn": "new_projectnamename",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fdd57d28-bc47-4269-9d00-96255029c1f2",
+        "partitions": [
+          {
+            "name": "Complaints",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\"),",
+                "    dbo_crb09_complaints = Source{[Schema=\"dbo\",Item=\"crb09_complaints\"]}[Data],",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(dbo_crb09_complaints,{\"crb09_title\", \"crb09_cleareddate\", \"crb09_closeddate\", \"crb09_complaintowner\", \"crb09_complaintstatus\", \"crb09_complaintstatusname\", \"crb09_complainttitle\", \"crb09_description\", \"crb09_market\", \"crb09_marketname\", \"crb09_receiveddate\",\"crb09_complaintownername\", \"new_projectnamename\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Removed Other Columns\",{{\"crb09_cleareddate\", type date}, {\"crb09_closeddate\", type date}, {\"crb09_receiveddate\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Compliments",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "53e4a55f-fd85-4ed6-a8ae-ea47665fa038",
+            "sourceColumn": "crb09_title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Closed Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "687b9fe0-37e0-4b0c-9b6f-da5265847e14",
+            "sourceColumn": "crb09_closeddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_complimentowner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8f6c9b27-4850-454d-94a6-320f563c53c4",
+            "sourceColumn": "crb09_complimentowner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_complimentstatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1684819f-7875-411d-950f-6d4d699faf60",
+            "sourceColumn": "crb09_complimentstatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Compliment Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c9f16f1e-ab36-4547-a4d3-249b2584c318",
+            "sourceColumn": "crb09_complimentstatusname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Compliment Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4d73cb2c-a0cf-478e-a7f4-1d13901317ed",
+            "sourceColumn": "crb09_complimenttitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "31264aa0-cfd6-4ee7-9590-648e7d3ada4d",
+            "sourceColumn": "crb09_description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_market",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6e5a4378-341b-4606-aa61-16c73b9ffd0c",
+            "sourceColumn": "crb09_market",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Market",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e6e80694-1db9-496b-aee0-e33617768edc",
+            "sourceColumn": "crb09_marketname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Received Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "1b882745-daa9-43fb-81a7-9c92c435e816",
+            "sourceColumn": "crb09_receiveddate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Compliment Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "adc03c41-37a0-431e-83d4-7dab2a070fb4",
+            "sourceColumn": "crb09_complimentownername",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Project Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9dfb2487-4371-4927-b26c-0294e969a6c6",
+            "sourceColumn": "new_projectnamename",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bcd01a13-28b9-4c59-9b28-6f9687221e40",
+        "partitions": [
+          {
+            "name": "Compliments",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = CommonDataService.Database(\"gsemea-pnp-uk-prod.crm11.dynamics.com\"),",
+                "    dbo_crb09_compliments = Source{[Schema=\"dbo\",Item=\"crb09_compliments\"]}[Data],",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(dbo_crb09_compliments,{\"crb09_title\", \"crb09_closeddate\", \"crb09_complimentowner\", \"crb09_complimentstatus\", \"crb09_complimentstatusname\", \"crb09_complimenttitle\", \"crb09_description\", \"crb09_market\", \"crb09_marketname\", \"crb09_receiveddate\", \"crb09_complimentownername\", \"new_projectnamename\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Removed Other Columns\",{{\"crb09_closeddate\", type date}, {\"crb09_receiveddate\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "NCR Process",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Audit Process Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0086c711-40ca-4bb9-962f-d3e505f465b3",
+            "sourceColumn": "Audit Process Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_auditprocess",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "941352c2-09aa-488d-8b3a-379dc3eec072",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Process Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5bc25161-5906-41f4-9048-7e84d922b61c",
+            "sourceColumn": "Process Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "282718a3-f8ae-4991-8a9e-43ea0dd8d180",
+        "partitions": [
+          {
+            "name": "NCR Process",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = tp_auditfindings,",
+                "    Select = Table.SelectColumns(Source,{\"crb09_auditprocess\"}),",
+                "    Rename = Table.RenameColumns(Select,{{\"crb09_auditprocess\", \"Audit Process Group\"}}),",
+                "    AddSplitTypes = ",
+                "        Table.AddColumn(",
+                "            Rename, ",
+                "            \"crb09_auditprocess\", ",
+                "            each Text.Split( [Audit Process Group], \",\" ), ",
+                "            type {text} ",
+                "        ),",
+                "    ExpandAuditProcess = Table.ExpandListColumn(AddSplitTypes, \"crb09_auditprocess\"),",
+                "    Distinct = Table.Distinct(ExpandAuditProcess),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(Distinct, \"Process Name\", each if [crb09_auditprocess] = \"1\" then \"Innovation\" else if [crb09_auditprocess] = \"2\" then \"Quality Management\" else if [crb09_auditprocess] = \"3\" then \"Resourcing\" else if [crb09_auditprocess] = \"4\" then \"Social Value​\" else if [crb09_auditprocess] = \"5\" then \"Leadership​\" else if [crb09_auditprocess] = \"6\" then \"Engineering\" else if [crb09_auditprocess] = \"7\" then \"PMO​\" else if [crb09_auditprocess] = \"8\" then \"Project Controls​\" else if [crb09_auditprocess] = \"9\" then \"Project Management\" else if [crb09_auditprocess] = \"10\" then \"Sales​\" else if [crb09_auditprocess] = \"11\" then \"Supply Chain​\" else if [crb09_auditprocess] = \"12\" then \"Warehouse Management​\" else if [crb09_auditprocess] = \"13\" then \"Food Safety​\" else if [crb09_auditprocess] = \"14\" then \"Accounting & Finance​\" else if [crb09_auditprocess] = \"15\" then \"Information Management & Systems​\" else if [crb09_auditprocess] = \"16\" then \"Health, Safety & Environment​\" else if [crb09_auditprocess] = \"17\" then \"Commercial​\" else if [crb09_auditprocess] = \"18\" then \"Communication\" else if [crb09_auditprocess] = \"19\" then \"Human Resources​\" else if [crb09_auditprocess] = \"20\" then \"Legal​\" else if [crb09_auditprocess] = \"21\" then \"Security​\" else if [crb09_auditprocess] = \"22\" then \"Information Security​\" else null)",
+                "in",
+                "    #\"Added Conditional Column\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "OBS Process",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Audit Process Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4982f4df-9b12-4a1a-b1b8-b42258bc4981",
+            "sourceColumn": "Audit Process Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "crb09_auditprocess",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8d4e5f80-3740-4af4-b957-9037fb945e2e",
+            "sourceColumn": "crb09_auditprocess",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Process Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "01841936-4f14-4a48-997a-42ee0bd62811",
+            "sourceColumn": "Process Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b8411150-8c63-437b-bac6-4e9c923ba5b2",
+        "partitions": [
+          {
+            "name": "OBS Process",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = crb09_observations,",
+                "    Select = Table.SelectColumns(Source,{\"crb09_auditprocess\"}),",
+                "    Rename = Table.RenameColumns(Select,{{\"crb09_auditprocess\", \"Audit Process Group\"}}),",
+                "    AddSplitTypes = ",
+                "        Table.AddColumn(",
+                "            Rename, ",
+                "            \"crb09_auditprocess\", ",
+                "            each Text.Split( [Audit Process Group], \",\" ), ",
+                "            type {text} ",
+                "        ),",
+                "    ExpandAuditProcess = Table.ExpandListColumn(AddSplitTypes, \"crb09_auditprocess\"),",
+                "    Distinct = Table.Distinct(ExpandAuditProcess),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(Distinct, \"Process Name\", each if [crb09_auditprocess] = \"1\" then \"Innovation\" else if [crb09_auditprocess] = \"2\" then \"Quality Management\" else if [crb09_auditprocess] = \"3\" then \"Resourcing\" else if [crb09_auditprocess] = \"4\" then \"Social Value​\" else if [crb09_auditprocess] = \"5\" then \"Leadership​\" else if [crb09_auditprocess] = \"6\" then \"Engineering\" else if [crb09_auditprocess] = \"7\" then \"PMO​\" else if [crb09_auditprocess] = \"8\" then \"Project Controls​\" else if [crb09_auditprocess] = \"9\" then \"Project Management\" else if [crb09_auditprocess] = \"10\" then \"Sales​\" else if [crb09_auditprocess] = \"11\" then \"Supply Chain​\" else if [crb09_auditprocess] = \"12\" then \"Warehouse Management​\" else if [crb09_auditprocess] = \"13\" then \"Food Safety​\" else if [crb09_auditprocess] = \"14\" then \"Accounting & Finance​\" else if [crb09_auditprocess] = \"15\" then \"Information Management & Systems​\" else if [crb09_auditprocess] = \"16\" then \"Health, Safety & Environment​\" else if [crb09_auditprocess] = \"17\" then \"Commercial​\" else if [crb09_auditprocess] = \"18\" then \"Communication\" else if [crb09_auditprocess] = \"19\" then \"Human Resources​\" else if [crb09_auditprocess] = \"20\" then \"Legal​\" else if [crb09_auditprocess] = \"21\" then \"Security​\" else if [crb09_auditprocess] = \"22\" then \"Information Security​\" else null)",
+                "in",
+                "    #\"Added Conditional Column\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Measures Table",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "5e9d6b70-a4ab-4e0b-a34d-4d22e732e685",
+        "measures": [
+          {
+            "name": "Audit Performance %",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "Audit",
+            "expression": "('Measures Table'[Audits performed on time]/('Measures Table'[Audits planned to date])*100)",
+            "lineageTag": "53df8386-f251-4252-bd2b-93156b8454af"
+          },
+          {
+            "name": "Audits performed on time",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "displayFolder": "Audit",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(",
+              "        'tp_audit'[Audit ID]",
+              "    ),",
+              "    KEEPFILTERS(tp_audit[Planned Start Date] <= TODAY() && 'tp_audit'[Actual Start Date]",
+              "        <= 'tp_audit'[Planned Start Date] && NOT(ISBLANK(tp_audit[Actual Start Date]))",
+              "))"
+            ],
+            "extendedProperties": [
+              {
+                "name": "MeasureTemplate",
+                "type": "json",
+                "value": {
+                  "daxTemplateName": "NLtoDAX",
+                  "version": 0
+                }
+              }
+            ],
+            "formatString": "General Number",
+            "lineageTag": "37c94af4-7a01-4d7f-8cd0-57dcce688bc7"
+          },
+          {
+            "name": "Audits planned to date",
+            "displayFolder": "Audit",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(",
+              "        'tp_audit'[Audit ID]",
+              "    ),",
+              "    KEEPFILTERS(tp_audit[Planned Start Date] <= TODAY()",
+              "))"
+            ],
+            "formatString": "0",
+            "lineageTag": "9d8510c5-fef4-47e9-9ef3-1d5b2c6cde49"
+          },
+          {
+            "name": "Cumulative NCRs Closed",
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "\tCOUNTROWS('tp_auditfindings'),",
+              "\tFILTER(",
+              "\t\tCALCULATETABLE(",
+              "\t\t\tSUMMARIZE(",
+              "\t\t\t\t'Reporting Calendar for NCR',",
+              "\t\t\t\t'Reporting Calendar for NCR'[Month Number],",
+              "\t\t\t\t'Reporting Calendar for NCR'[Month]",
+              "\t\t\t),",
+              "\t\t\tALLSELECTED('Reporting Calendar for NCR')",
+              "\t\t),",
+              "\t\tISONORAFTER(",
+              "\t\t\t'Reporting Calendar for NCR'[Month Number], MAX('Reporting Calendar for NCR'[Month Number]), DESC,",
+              "\t\t\t'Reporting Calendar for NCR'[Month], MAX('Reporting Calendar for NCR'[Month]), DESC",
+              "\t\t)",
+              "\t), USERELATIONSHIP('Reporting Calendar for NCR'[Date],tp_auditfindings[Closed Date]",
+              "))"
+            ],
+            "formatString": "0",
+            "lineageTag": "b5e33423-2cd5-4314-a5e6-c1743980f918"
+          },
+          {
+            "name": "Cumulative NCRs Raised",
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "\tCOUNTROWS('tp_auditfindings'),",
+              "\tFILTER(",
+              "\t\tCALCULATETABLE(",
+              "\t\t\tSUMMARIZE(",
+              "\t\t\t\t'Reporting Calendar for NCR',",
+              "\t\t\t\t'Reporting Calendar for NCR'[Month Number],",
+              "\t\t\t\t'Reporting Calendar for NCR'[Month]",
+              "\t\t\t),",
+              "\t\t\tALLSELECTED('Reporting Calendar for NCR')",
+              "\t\t),",
+              "\t\tISONORAFTER(",
+              "\t\t\t'Reporting Calendar for NCR'[Month Number], MAX('Reporting Calendar for NCR'[Month Number]), DESC,",
+              "\t\t\t'Reporting Calendar for NCR'[Month], MAX('Reporting Calendar for NCR'[Month]), DESC",
+              "\t\t)",
+              "\t)",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "b579af21-7950-40f4-90a3-cddb6499f4b0"
+          },
+          {
+            "name": "NCR average days late",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "CALCULATE (",
+              "    AVERAGE ( tp_auditfindings[Days since due date] ),",
+              "    FILTER ( ALL ( tp_auditfindings ), [Overdue NCRs] = \"Overdue\" ))"
+            ],
+            "lineageTag": "213214b6-0095-418d-b6a0-557ed1e8f370"
+          },
+          {
+            "name": "NCR Performance %",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "NCRs",
+            "expression": "('Measures Table'[NCRs closed on time]/[NCRs due to date])*100",
+            "lineageTag": "9a52e460-43e4-489c-b077-63aa9c4c45e0"
+          },
+          {
+            "name": "NCRs closed on time",
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(",
+              "        'tp_auditfindings'[ID]",
+              "    ),",
+              "    KEEPFILTERS('tp_auditfindings'[Due_Date] <= TODAY() && 'tp_auditfindings'[Closed Date]",
+              "        <= 'tp_auditfindings'[Due_Date] && NOT(ISBLANK('tp_auditfindings'[Closed Date]))",
+              "))"
+            ],
+            "formatString": "0",
+            "lineageTag": "ea5b403d-ccb0-40c7-9cef-4c8ce0c2cfc2"
+          },
+          {
+            "name": "NCRs due to date",
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(",
+              "        'tp_auditfindings'[ID]",
+              "    ),",
+              "    KEEPFILTERS('tp_auditfindings'[Due_Date] <= TODAY()",
+              "))"
+            ],
+            "formatString": "0",
+            "lineageTag": "91b971eb-4e29-4b3a-a4e1-514782cd9fd9"
+          },
+          {
+            "name": "Cumulative NCR's Raised",
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "var maxmonth = MAX(tp_auditfindings[Raised_Date])",
+              "RETURN",
+              "CALCULATE(",
+              "    COUNTROWS(tp_auditfindings),",
+              "    FILTER('tp_auditfindings',",
+              "            tp_auditfindings[Raised_Date] <= maxmonth",
+              "    ),USERELATIONSHIP(tp_auditfindings[Raised_Date],'Reporting Calendar for NCR'[Date])",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "f6def79c-dc09-48fe-b204-70b6a6d121f0"
+          },
+          {
+            "name": "Cumulative NCR's Closed",
+            "displayFolder": "NCRs",
+            "expression": [
+              "",
+              "var maxmonth = MAX('Reporting Calendar for NCR'[Date])",
+              "RETURN",
+              "CALCULATE(",
+              "    COUNTROWS(tp_auditfindings),",
+              "    FILTER('tp_auditfindings',",
+              "            tp_auditfindings[Closed Date] <= maxmonth",
+              "    )//,USERELATIONSHIP(tp_auditfindings[Closed Date],'Reporting Calendar for NCR'[Date])",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "42f700a2-abf8-465f-a797-08767fbec9fa"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Measures Table",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
